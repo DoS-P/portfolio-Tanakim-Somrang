@@ -587,6 +587,13 @@
       color: var(--muted);
       font-size: 1.25rem;
       border: 1px solid rgba(255, 255, 255, 0.03);
+      overflow: hidden;
+    }
+
+    .work-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .work-info {
@@ -657,7 +664,7 @@
       border: none;
     }
 
-    /* ─── SOCIAL / FOOTER (CENTERED WITH FLOATING ICON) ─── */
+    /* ─── SOCIAL / FOOTER ─── */
     footer {
       padding: 6rem 3rem 4rem;
       border-top: 1px solid var(--line);
@@ -771,7 +778,7 @@
       footer { padding: 4rem 2.5rem; }
     }
 
-    /* 📱 การจัดวางสำหรับหน้าจอมือถือ */
+    /* 📱 Responsive Mobile Layout */
     @media (max-width: 767px) {
       nav {
         padding: 1rem 1.5rem;
@@ -836,7 +843,6 @@
         gap: 2.5rem;
       }
 
-      /* การจัดเรียง Work list สำหรับมือถือ (แก้ให้รองรับไอคอน) */
       .work-item {
         grid-template-columns: 5rem 1fr;
         grid-template-rows: auto auto;
@@ -999,6 +1005,16 @@
 
         <div class="work-item">
           <span class="work-year">2026</span>
+          <div class="work-icon"><img src="FeatureFilm/A.1 The Last Move.png" alt="A.1 The Last Move"></div>
+          <div class="work-info">
+            <span class="work-title">A.1 The Last Move</span>
+            <span class="work-note">Nominee For Best Original Score - Digital Griffix Films Award 2026</span>
+          </div>
+          <span class="work-tag">Short Film</span>
+        </div>
+
+        <div class="work-item">
+          <span class="work-year">2026</span>
           <div class="work-icon"><i class="fa-solid fa-film"></i></div>
           <div class="work-info">
             <span class="work-title">Ghost Board กล่องผีสุ่มวิญญาณ</span>
@@ -1009,7 +1025,7 @@
 
         <div class="work-item">
           <span class="work-year">2025</span>
-          <div class="work-icon"><i class="fa-solid fa-film"></i></div>
+          <div class="work-icon"><img src="FeatureFilm/Tee Yod 3.jpg" alt="Tee Yod 3"></div>
           <div class="work-info">
             <span class="work-title">Tee Yod 3 / Death Whisperer 3</span>
             <span class="work-note">Assistant Orchestrated</span>
@@ -1019,7 +1035,7 @@
 
         <div class="work-item">
           <span class="work-year">2025</span>
-          <div class="work-icon"><i class="fa-solid fa-film"></i></div>
+          <div class="work-icon"><img src="FeatureFilm/Attack 13.jpg" alt="Attack 13"></div>
           <div class="work-info">
             <span class="work-title">Attack 13 วิญญาณเลขที่ 13</span>
             <span class="work-note">Assistant Music Composer</span>
@@ -1029,12 +1045,22 @@
 
         <div class="work-item">
           <span class="work-year">2025</span>
-          <div class="work-icon"><i class="fa-solid fa-film"></i></div>
+          <div class="work-icon"><img src="FeatureFilm/Nak Love Mak Soo Muchh.jpg" alt="Nak Love Mak Soo Much"></div>
           <div class="work-info">
             <span class="work-title">Nak Loves Mak Sooo Much! นาครักมาก ม๊ากมาก</span>
             <span class="work-note">Assistant Music Composer</span>
           </div>
           <span class="work-tag">Feature Film</span>
+        </div>
+
+        <div class="work-item">
+          <span class="work-year">2025</span>
+          <div class="work-icon"><img src="FeatureFilm/Dear God.png" alt="Dear God"></div>
+          <div class="work-info">
+            <span class="work-title">Dear God, I want to puke on your sweater</span>
+            <span class="work-note">Best Thai Short Film - ITFF 2025</span>
+          </div>
+          <span class="work-tag">Short Film</span>
         </div>
 
         <div class="work-item">
@@ -1049,7 +1075,7 @@
 
         <div class="work-item">
           <span class="work-year">2025</span>
-          <div class="work-icon"><i class="fa-solid fa-film"></i></div>
+          <div class="work-icon"><img src="FeatureFilm/Jet Lag.jpg" alt="Jet Lag"></div>
           <div class="work-info">
             <span class="work-title">Jet Lag เจ็ทแลค</span>
             <span class="work-note">Assistant Music Composer</span>
@@ -1059,7 +1085,7 @@
 
         <div class="work-item">
           <span class="work-year">2025</span>
-          <div class="work-icon"><i class="fa-solid fa-film"></i></div>
+          <div class="work-icon"><img src="FeatureFilm/Enigma.jpg" alt="Enigma"></div>
           <div class="work-info">
             <span class="work-title">Enigma บุหงาหมื่นภมร</span>
             <span class="work-note">Assistant Music Composer</span>
@@ -1069,7 +1095,7 @@
 
         <div class="work-item">
           <span class="work-year">2024</span>
-          <div class="work-icon"><i class="fa-solid fa-film"></i></div>
+          <div class="work-icon"><img src="FeatureFilm/Clash.jpg" alt="Clash"></div>
           <div class="work-info">
             <span class="work-title">Clash</span>
             <span class="work-note">Assistant Mixing Engineer</span>
@@ -1079,7 +1105,7 @@
 
         <div class="work-item">
           <span class="work-year">2024</span>
-          <div class="work-icon"><i class="fa-solid fa-film"></i></div>
+          <div class="work-icon"><img src="FeatureFilm/Rider.jpg" alt="Rider"></div>
           <div class="work-info">
             <span class="work-title">Rider</span>
             <span class="work-note">Music Intern</span>
@@ -1089,7 +1115,7 @@
 
         <div class="work-item">
           <span class="work-year">2024</span>
-          <div class="work-icon"><i class="fa-solid fa-film"></i></div>
+          <div class="work-icon"><img src="FeatureFilm/Isan Nikah.jpg" alt="Isan Nikah"></div>
           <div class="work-info">
             <span class="work-title">Isan Nikah ผู้บ่าวนิกะห์</span>
             <span class="work-note">Music Intern</span>
@@ -1106,7 +1132,7 @@
 
         <div class="work-item">
           <span class="work-year"></span>
-          <div class="work-icon"><i class="fa-solid fa-music"></i></div>
+          <div class="work-icon"><img src="MV/กลางมหานคร.png" alt="กลางมหานคร"></div>
           <div class="work-info">
             <span class="work-title">กลางมหานคร - ดาราธานี (Bangkok Story)</span>
             <span class="work-note">Producer, Mixing, Mastering</span>
@@ -1116,7 +1142,7 @@
 
         <div class="work-item">
           <span class="work-year"></span>
-          <div class="work-icon"><i class="fa-solid fa-music"></i></div>
+          <div class="work-icon"><img src="MV/รอยหวาน.png" alt="รอยหวาน"></div>
           <div class="work-info">
             <span class="work-title">รอยหวาน - ดาราธานี</span>
             <span class="work-note">Producer, Mixing, Mastering</span>
@@ -1126,7 +1152,7 @@
 
         <div class="work-item">
           <span class="work-year"></span>
-          <div class="work-icon"><i class="fa-solid fa-music"></i></div>
+          <div class="work-icon"><img src="MV/With Me.png" alt="With Me"></div>
           <div class="work-info">
             <span class="work-title">With Me - moom</span>
             <span class="work-note">Co Produce, Co Arranger</span>
@@ -1136,7 +1162,7 @@
 
         <div class="work-item">
           <span class="work-year"></span>
-          <div class="work-icon"><i class="fa-solid fa-music"></i></div>
+          <div class="work-icon"><img src="MV/Moon.png" alt="Moon"></div>
           <div class="work-info">
             <span class="work-title">Moon (feat.valen) - moom</span>
             <span class="work-note">Co Produce, Co Arranger</span>
@@ -1146,7 +1172,7 @@
 
         <div class="work-item">
           <span class="work-year"></span>
-          <div class="work-icon"><i class="fa-solid fa-music"></i></div>
+          <div class="work-icon"><img src="MV/ขี้เกียจ.png" alt="ขี้เกียจ"></div>
           <div class="work-info">
             <span class="work-title">ขี้เกียจ - ใจดี / Hugself - Jaidee</span>
             <span class="work-note">Lyric Compose, Co Producer, Mixing and Mastering</span>
@@ -1156,7 +1182,7 @@
 
         <div class="work-item">
           <span class="work-year"></span>
-          <div class="work-icon"><i class="fa-solid fa-music"></i></div>
+          <div class="work-icon"><img src="MV/ก็จะรอ.png" alt="ก็จะรอ"></div>
           <div class="work-info">
             <span class="work-title">ก็จะรอ - ใจดี / The Journey - Jaidee</span>
             <span class="work-note">Mixing and Mastering</span>
@@ -1166,10 +1192,30 @@
 
         <div class="work-item">
           <span class="work-year"></span>
-          <div class="work-icon"><i class="fa-solid fa-music"></i></div>
+          <div class="work-icon"><img src="MV/ชีวิตนี้มีเพียงครั้งเดียว.png" alt="ชีวิตนี้มีเพียงครั้งเดียว"></div>
           <div class="work-info">
             <span class="work-title">ชีวิตนี้มีเพียงครั้งเดียว “rearranged” (OST)</span>
             <span class="work-note">Lyric Compose, Co Producer, Mixing and Mastering</span>
+          </div>
+          <span class="work-tag">Music</span>
+        </div>
+
+        <div class="work-item">
+          <span class="work-year"></span>
+          <div class="work-icon"><img src="MV/3 ฤดูกาล.png" alt="3 ฤดูกาล"></div>
+          <div class="work-info">
+            <span class="work-title">3 ฤดูกาล</span>
+            <span class="work-note">Music Production</span>
+          </div>
+          <span class="work-tag">Music</span>
+        </div>
+
+        <div class="work-item">
+          <span class="work-year"></span>
+          <div class="work-icon"><img src="MV/New Photo.jpg" alt="New Project"></div>
+          <div class="work-info">
+            <span class="work-title">New Project / Profile</span>
+            <span class="work-note">Music Production</span>
           </div>
           <span class="work-tag">Music</span>
         </div>
@@ -1186,7 +1232,7 @@
 
         <div class="work-item">
           <span class="work-year"></span>
-          <div class="work-icon"><i class="fa-solid fa-music"></i></div>
+          <div class="work-icon"><img src="MV/แจกัน.png" alt="แจกัน"></div>
           <div class="work-info">
             <span class="work-title">แจกัน - Pung Nitirat</span>
             <span class="work-note">Producer, Arranger, Mixing and Mastering</span>
@@ -1278,10 +1324,8 @@
     }
   </style>
   <script>
-    // Remove no-js class so CSS transitions work
     document.documentElement.classList.remove('no-js');
 
-    // Nav: add .scrolled class when user scrolls down
     const nav = document.getElementById('main-nav');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 60) {
@@ -1291,7 +1335,6 @@
       }
     }, { passive: true });
 
-    // Fade-in on scroll
     if ('IntersectionObserver' in window) {
       const obs = new IntersectionObserver((entries) => {
         entries.forEach((e, i) => {
