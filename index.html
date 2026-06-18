@@ -776,16 +776,129 @@
     }
 
     /* ─── RESPONSIVE ─── */
+    @media (min-width: 1025px) and (max-width: 1280px) {
+      nav { padding: 1.5rem 3rem; }
+      .nav-links { gap: 1.5rem; }
+      .hero-left { padding: 0 3rem; }
+      .work-item { grid-template-columns: 4rem 6rem 1fr auto; gap: 1rem; }
+    }
+
+    /* 📱 สำหรับแท็บเล็ต หรือตอนหน้าต่างคอมย่อแคบมาก (768px - 1024px) */
     @media (min-width: 768px) and (max-width: 1024px) {
       nav { padding: 1.25rem 2.5rem; }
+      .nav-links { gap: 1.5rem; }
       section { padding: 6rem 2.5rem; }
       #home { grid-template-columns: 1fr 1fr; }
       .hero-left { padding: 0 2.5rem; }
       .release-grid, .about-grid { gap: 3rem; }
       .listen-grid { gap: 2rem; }
-      .work-item { grid-template-columns: 4rem 1fr auto; }
-      .work-tag { padding: 0.25rem 0.5rem; }
+      
+      /* แก้ไขบัก Layout รายชื่อผลงานตอนย่อจอ (ปรับให้รับ 4 คอลัมน์พอดี) */
+      .work-item { grid-template-columns: 3.5rem 5rem 1fr auto; gap: 1rem; }
+      .work-icon { width: 65px; height: 65px; font-size: 1rem; }
+      .work-title { font-size: 1.15rem; }
+      .work-tag { padding: 0.25rem 0.5rem; font-size: 0.55rem; }
+      
       footer { padding: 4rem 2.5rem; }
+    }
+
+    /* 📱 การจัดวางสำหรับหน้าจอมือถือ (max-width: 767px) */
+    @media (max-width: 767px) {
+      nav {
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        gap: 0.8rem;
+        background: rgba(9, 9, 10, 0.97);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+      .nav-logo { font-size: 1.1rem; letter-spacing: 0.18em; text-align: center; }
+      .nav-links { gap: 1.5rem; justify-content: center; width: 100%; flex-wrap: wrap; }
+      
+      section { padding: 5rem 1.5rem; }
+      
+      #home {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+        padding-top: 6rem;
+        background: var(--bg);
+      }
+      .hero-right {
+        position: relative;
+        width: 100%;
+        height: 35vh;
+        order: 1;
+        z-index: 1;
+      }
+      .hero-img {
+        transform: none; 
+      }
+      .hero-img-overlay {
+        background: linear-gradient(to bottom, transparent 40%, var(--bg) 100%);
+      }
+      .hero-left {
+        position: relative;
+        z-index: 2;
+        padding: 1.5rem 1.5rem 4rem 1.5rem;
+        align-items: center;
+        text-align: center;
+        order: 2;
+        background: transparent;
+      }
+      .hero-label {
+        font-size: 0.55rem;
+        line-height: 1.8;
+      }
+      .hero-tagline {
+        border-left: none;
+        border-top: 1px solid var(--accent);
+        padding-left: 0;
+        padding-top: 1.2rem;
+        margin-top: 0.5rem;
+        width: 100%;
+        max-width: 320px; 
+      }
+      .hero-scroll { display: none; }
+      
+      .release-grid, .about-grid, .listen-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .work-item {
+        grid-template-columns: 5rem 1fr;
+        grid-template-rows: auto auto;
+        gap: 0.5rem 1rem;
+        padding: 1.25rem 0.5rem;
+      }
+      .work-year {
+        display: none; 
+      }
+      .work-icon {
+        width: 5rem;
+        height: 5rem;
+        font-size: 1rem;
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        align-self: center;
+      }
+      .work-info {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      .work-title { font-size: 1.15rem; }
+      .work-tag {
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: start;
+        font-size: 0.55rem;
+        padding: 0.25rem 0.6rem;
+      }
+
+      footer { padding: 4rem 1.5rem 3rem; gap: 2.5rem; }
+      .social-links { flex-wrap: wrap; justify-content: center; gap: 1.5rem; }
     }
 
     /* 📱 Responsive Mobile Layout */
